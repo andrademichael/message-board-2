@@ -5,6 +5,7 @@
       {{answer-tile answer=answer}}
     {{/each}}
   {{else}}
-    <button {{action 'answersShow'}}>See/Hide Answers</button>
+    <button {{action 'answersToggle'}}>See/Hide Answers</button>
   {{/if}}
+  {{answer-question question=question answer="answer"}}
 </li>
