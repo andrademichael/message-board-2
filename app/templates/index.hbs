@@ -1,0 +1,8 @@
+<h1>You've Got Questions?</h1>
+<h2>Well, so do we!</h2>
+
+<ul>
+  {{#each model as |question|}}
+    <li>{{question.author}} asked: <em>{{question.content}}</em></li>
+  {{/each}}
+</ul>
