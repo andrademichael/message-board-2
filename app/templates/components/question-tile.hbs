@@ -1,0 +1,10 @@
+<li>
+  {{question.author}} asked: <em>{{question.content}}</em>
+  {{#if areAnswersShowing}}
+    {{#each model as |answer|}}
+      {{answer-tile answer=answer}}
+    {{/each}}
+  {{else}}
+    <button {{action 'answersShow'}}>See/Hide Answers</button>
+  {{/if}}
+</li>

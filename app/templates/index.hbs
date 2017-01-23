@@ -3,6 +3,6 @@
 
 <ul>
   {{#each model as |question|}}
-    <li>{{question.author}} asked: <em>{{question.content}}</em></li>
+    {{question-tile question=question}}
   {{/each}}
 </ul>
