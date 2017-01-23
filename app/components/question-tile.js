@@ -10,7 +10,7 @@ export default Ember.Component.extend({
       } else {
         this.set('areAnswersShowing', true);
       }
-    }
+    },
 
     addAnswer(answer) {
       this.sendAction('addAnswer', {question: this, answer: answer});

@@ -1,11 +1,9 @@
 <li>
   {{question.author}} asked: <em>{{question.content}}</em>
-  {{#if areAnswersShowing}}
-    {{#each model as |answer|}}
-      {{answer-tile answer=answer}}
-    {{/each}}
+  {{#if question.answers}}
+    <p>{{question.answers.length}} answers so far!</p>
   {{else}}
-    <button {{action 'answersToggle'}}>See/Hide Answers</button>
+    <p>No answers yet!</p>
   {{/if}}
-  {{answer-question question=question answer="answer"}}
+{{#link-to 'question/question_id'}}View answers and add your own!{{/link-to}}
 </li>

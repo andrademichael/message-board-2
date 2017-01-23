@@ -17,7 +17,7 @@ export default Ember.Route.extend({
       newAnswers = currentAnswers.push(answer);
       question.set("answers", newAnswers);
       question.save();
-      this.transitionTo('questionView');
+      this.transitionTo('question');
     }
   }
 });
